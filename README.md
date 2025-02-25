@@ -40,6 +40,7 @@ A sleek and responsive CV website built with HTML, CSS, and JavaScript.
 - Contact information
 
 ## 💻 Live Demo
+
 You can view the live demo of the calculator by clicking the link below:
 
 <a href="https://daneshcode.github.io/cv-website/" >🔗 Open the cv-website</a>
@@ -48,6 +49,6 @@ You can view the live demo of the calculator by clicking the link below:
 
 Feel free to reach out:
 
-- Email: Dani.kh2652@Gmail.com
+- Email: DaneshCode.Dev@gmail.com
 - Telegram: @Menasheh_kh
 - GitHub: @DaneshCode
