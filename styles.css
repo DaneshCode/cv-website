@@ -53,6 +53,7 @@ body {
 
 .card {
   background: var(--white);
+  border: 2px solid #ffffff;
   border-radius: 1rem;
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -78,6 +79,14 @@ body {
 
 .display-container {
   position: relative;
+}
+
+.display-container .container {
+  padding: 1rem 0 0 1.9rem;
+}
+
+.display-container h3 {
+  margin: 0;
 }
 
 .display-container img {
@@ -285,19 +294,6 @@ html {
   background: var(--primary);
 }
 
-/* Print Styles */
-@media print {
-  .card {
-    box-shadow: none;
-    border: 1px solid #eee;
-  }
-
-  .theme-toggle,
-  .print-btn {
-    display: none;
-  }
-}
-
 /* Loading Animation */
 .loader {
   position: fixed;
@@ -399,11 +395,91 @@ html {
   }
 }
 
-/* Print Styles */
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), #1d4ed8);
+  z-index: 1001;
+  transition: width 0.1s ease-out;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+[data-theme='dark'] .project-link {
+  background-color: #2563eb;
+  color: var(--text);
+}
+
+[data-theme='dark'] .project-link:hover {
+  background-color: #1d4ed8;
+  color: var(--text);
+  transition: background-color 0.3s ease;
+}
+
 @media print {
+  .card {
+    break-inside: avoid;
+  }
+
+  .theme-toggle,
+  .print-btn,
   .loader,
   .download-btn,
-  .copy-btn {
+  .copy-btn,
+  .scroll-progress {
     display: none;
+  }
+  .typing::after {
+    content: none; /* حذف کاراکتر */
+    animation: none; /* حذف انیمیشن */
+  }
+
+  /* حفظ رنگ و قابلیت کلیک لینک‌ها */
+  a {
+    text-decoration: underline;
+    color: white !important;
+  }
+
+  /* جلوگیری از شکستن عناصر مهم */
+  .container {
+    break-inside: avoid;
+  }
+
+  /* بهینه‌سازی فضای صفحه */
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* اطمینان از خوانایی متن */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
   }
 }
