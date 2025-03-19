@@ -41,7 +41,7 @@ A sleek and responsive CV website built with HTML, CSS, and JavaScript.
 
 ## 💻 Live Demo
 
-You can view the live demo of the calculator by clicking the link below:
+You can view the live demo of the cv-website by clicking the link below:
 
 <a href="https://daneshcode.github.io/cv-website/" >🔗 Open the cv-website</a>
 

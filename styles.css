@@ -81,18 +81,16 @@ body {
   position: relative;
 }
 
-.display-container .container {
-  padding: 1rem 0 0 1.9rem;
-}
-
+.display-container h4,
 .display-container h3 {
-  margin: 0;
+  margin: 0 0 0 0;
 }
 
 .display-container img {
   border-radius: 1rem 1rem 0 0;
+  width: 100%;
   object-fit: cover;
-  height: 300px;
+  height: auto;
 }
 
 .container {
@@ -145,6 +143,35 @@ h6 {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 1.5rem 0 1rem 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skills p {
+  display: flex;
+  flex: 1 1 100px;
+  padding: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: var(--transition);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.skills p:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.skills i {
+  padding: 0 0.5rem;
 }
 
 /* Footer */
@@ -443,9 +470,9 @@ html {
 }
 
 @media print {
-  .card {
+  /* .card {
     break-inside: avoid;
-  }
+  } */
 
   .theme-toggle,
   .print-btn,
@@ -467,9 +494,9 @@ html {
   }
 
   /* جلوگیری از شکستن عناصر مهم */
-  .container {
+  /* .container {
     break-inside: avoid;
-  }
+  } */
 
   /* بهینه‌سازی فضای صفحه */
   .content {
