@@ -244,10 +244,6 @@ h6 {
     gap: 1rem;
   }
 
-  .display-container img {
-    height: 200px;
-  }
-
   .hover-opacity {
     font-size: 1.25rem;
     margin: 0 0.25rem;
@@ -265,10 +261,6 @@ h6 {
 @media (min-width: 1400px) {
   .content {
     max-width: 1400px;
-  }
-
-  .display-container img {
-    height: 350px;
   }
 }
 
@@ -474,9 +466,9 @@ html {
 }
 
 @media print {
-  /* .card {
+  .card {
     break-inside: avoid;
-  } */
+  }
 
   .theme-toggle,
   .print-btn,
@@ -498,13 +490,13 @@ html {
   }
 
   /* جلوگیری از شکستن عناصر مهم */
-  /* .container {
+  .container {
     break-inside: avoid;
-  } */
+  }
 
   /* بهینه‌سازی فضای صفحه */
   .content {
-    margin: 0;
+    margin: 0.8rem;
     padding: 0;
   }
 
